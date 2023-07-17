@@ -1,6 +1,8 @@
 ## screenshot
-![WhatsApp Image 2023-07-17 at 4 18 21 PM (1)](https://github.com/Sayo1305/foodappnative/assets/84987518/4b9361d4-bc3d-4a80-a8db-af307ac9927d)
-![WhatsApp Image 2023-07-17 at 4 18 21 PM](https://github.com/Sayo1305/foodappnative/assets/84987518/2106df44-4b74-4e8d-8052-3678527958c0)
+<div style="display: flex;">
+ <img src="https://github.com/Sayo1305/foodappnative/assets/84987518/4b9361d4-bc3d-4a80-a8db-af307ac9927d" style="width: 20%;"/>
+ <img src="https://github.com/Sayo1305/foodappnative/assets/84987518/2106df44-4b74-4e8d-8052-3678527958c0" style="width: 20%;"/>
+</div>
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 

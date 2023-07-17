@@ -22,12 +22,12 @@ import { app, auth } from "../firebase/firebase";
 
 const LogIn = () => {
   const provider = new GoogleAuthProvider(app);
-  const navigate = useNavigation();
+  const navigation = useNavigation();
   const [Email, setEmail] = useState("");
   const [Name, SetName] = useState("");
   const [Password, SetPassword] = useState("");
   const handle_login = ()=>{
-    navigate.navigate("SignpUp");
+    navigation.navigate("SignpUp");
   }
   const handle_click = () => {
     if (Email === "" || Password === "" || Name === "") {
@@ -39,7 +39,7 @@ const LogIn = () => {
         // Signed in
         const user = userCredential.user;
         console.log(user);
-        navigate.navigate("AppHome");
+        navigation.navigate("AppHome");
         // ...
       })
       .catch((error) => {

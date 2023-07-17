@@ -6,12 +6,42 @@ import {
   View,
   TextInput,
   ScrollView,
+  BackHandler,
+  Alert,
 } from "react-native";
 import Card from "../components/Card";
 import HeroX from "../components/HeroX";
 import CaroselData from "../data/imagestore";
+import { useFocusEffect, useNavigation, useRoute } from "@react-navigation/native";
 
 const AppHome = () => {
+  const navigate = useNavigation();
+  const route = useRoute();
+  const currentScreen = route.name;
+  useFocusEffect(
+    React.useCallback(() => {
+      if(currentScreen === "AppHome"){
+        const onBackPress = () => {
+          Alert.alert(
+            'Exit App',
+            'Are you sure you want to exit the app?',
+            [
+              { text: 'Cancel', onPress: () => {}, style: 'cancel' },
+              { text: 'Exit', onPress: () => BackHandler.exitApp() },
+            ],
+            { cancelable: false }
+          );
+          return true;
+        };
+        BackHandler.addEventListener('hardwareBackPress', onBackPress);
+        return () => BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+    }
+    }, [])
+  );
+  
+  const handle_click = () => {
+    navigate.navigate('login');
+  };
   return (
     <SafeAreaView className="my-7 w-full h-auto bg-slate-200">
       <View className="p-2 flex flex-row justify-between items-center border-[1px] border-black bg-slate-300">
@@ -39,7 +69,7 @@ const AppHome = () => {
             ></Image>
           </View>
         </View>
-        <View className="">
+        <View className="" onTouchStart={()=>{handle_click()}}>
           <Image
             className="h-10 w-10"
             source={require("../images/user.png")}

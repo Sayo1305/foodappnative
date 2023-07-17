@@ -1,6 +1,8 @@
 import { Alert, Image, SafeAreaView, Text, View } from "react-native";
 import AppStyles from "../styles/AppStyles";
-import { useNavigation } from "@react-navigation/native";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
+import { BackHandler } from 'react-native';
+import React, { useEffect } from "react";
 
 const Home = () => {
   const navigate = useNavigation();

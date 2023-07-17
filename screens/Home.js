@@ -11,7 +11,7 @@ const Home = () => {
     navigate.navigate('AppHome');
   }
   return (
-    <SafeAreaView style={AppStyles.container}>
+    <SafeAreaView className="w-full p-5 bg-[#129a71] relative h-screen flex-1 flex flex-col justify-center items-center">
       <Image
         style={AppStyles.HomeImage}
         source={require("../images/bibimbap.png")}
@@ -29,9 +29,9 @@ const Home = () => {
         </View>
       </View>
       <View style={AppStyles.ButtonCont}>
-        <Text style = {AppStyles.ButtonSkipText} onPress={handle_skip}>{"Skip"}</Text>
         <Text style= {AppStyles.ButtonText} onPress = {handle_click}>{"Get Started"}</Text>
       </View>
+      <Text className="absolute top-8 text-xl font-semibold right-10" onPress={handle_skip}>{"skip"}</Text>
     </SafeAreaView>
   );
 };

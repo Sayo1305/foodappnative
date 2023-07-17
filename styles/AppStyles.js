@@ -7,6 +7,7 @@ export default StyleSheet.create({
     backgroundColor : '#129a71',
     justifyContent : "center",
     alignItems :"center",
+    position : "relative",
     flexDirection : "column",
   },
   HomeImage: {

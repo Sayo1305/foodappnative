@@ -6,10 +6,12 @@ export default StyleSheet.create({
       },
       MainLoginCont : {
             flex : 1,
-            backgroundColor : "#03C988"
+            display: "flex",
+            justifyContent : "center",
+            alignItems: "center",
+            backgroundColor : "#F0EBD8"
       },
       InputCont : {
-            flex : 1,
             justifyContent : "center",
             alignItems : "center",
             padding: 30,

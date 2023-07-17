@@ -26,6 +26,10 @@ Below you'll find information about performing common tasks. The most recent ver
   * [iOS Simulator won't open](#ios-simulator-wont-open)
   * [QR Code does not scan](#qr-code-does-not-scan)
 
+
+## photo atrribution
+
+<a href="https://www.flaticon.com/free-icons/google" title="google icons">Google icons created by Freepik - Flaticon</a>
 ## Updating to New Releases
 
 You should only need to update the global installation of `create-react-native-app` very rarely, ideally never.
